@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Login</h1>
+    <nav>
+      <a href="home.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="shoppingcart.html">Shopping Cart</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="login.html">Login</a>  
+    </nav>
+</header>
+<div id="box">
+<section class="content">
+    <h2><center>User Login</center></h2>
+        <br><br><br>
+    <form onsubmit="return validateLogin()">
+        <label >Username:</label><br>
+        <input type="text" id="username" 
+        style="width:250px; height:30px; border: 2px solid rgb(70, 67, 67)"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" id="password"
+        style="width:250px; height:30px; border: 2px solid rgb(70, 67, 67)"><br><br>
+
+        <button type="submit">Login</button>
+
+        <br>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+
+        <p id="error" class="error"></p>
+    </form>
+</section>
+</div>
+
+<br><br><br><br><br><br>
+
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ShopZone. All Rights Reserved.</p>
+        <p>📧 support@shopzone.com | 📞 +91-987-654-3210</p>
+    </footer>
+
+</body>
+</html>

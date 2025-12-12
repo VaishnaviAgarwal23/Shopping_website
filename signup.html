@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateSignup() {
+            let user = document.getElementById("newuser").value;
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("newpass").value;
+            let cpass = document.getElementById("confpass").value;
+            let error = document.getElementById("error");
+
+            if (user === "" || email === "" || pass === "" || cpass === "") {
+                error.innerHTML = "All fields are required!";
+                return false;
+            }
+            if (pass !== cpass) {
+                error.innerHTML = "Passwords do NOT match!";
+                return false;
+            }
+
+            alert("Account created successfully! Now login.");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Sign Up</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="shoppingcart.html">Shopping Cart</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<div id="box">
+    <section class="content">
+        <h2><center>Create New Account</center></h2><br><br>
+
+        <form onsubmit="return validateSignup()">
+
+            <label>Username:</label><br>
+            <input type="text" id="newuser" 
+            style="width:250px; height:30px; border: 2px solid gray;"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" id="email" 
+            style="width:250px; height:30px; border: 2px solid gray;"><br><br>
+
+            <label>Password:</label><br>
+            <input type="password" id="newpass" 
+            style="width:250px; height:30px; border: 2px solid gray;"><br><br>
+
+            <label>Confirm Password:</label><br>
+            <input type="password" id="confpass" 
+            style="width:250px; height:30px; border: 2px solid gray;"><br><br>
+
+            <button type="submit">Create Account</button>
+
+            <p id="error" style="color:red;"></p>
+
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </section>
+</div>
+
+<br><br><br><br><br>
+
+<footer>
+    <p>&copy; 2025 ShopZone. All Rights Reserved.</p>
+    <p>📧 support@shopzone.com | 📞 +91-987-654-3210</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+function validateLogin() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+    let error = document.getElementById("error");
+
+    if (user === "" || pass === "") {
+        error.innerHTML = "All fields are required!";
+        return false;
+    }
+
+    if (pass.length < 5) {
+        error.innerHTML = "Password must be at least 5 characters!";
+        return false;
+    }
+
+    
+
+    alert("Login Successful!");
+    return true;
+}
